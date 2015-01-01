@@ -40,4 +40,4 @@ return $baoming;
 Unable to load R3 module D:\app\virtualbox/VBoxDD.DLL (VBoxDD): GetLastError=1790 (VERR_UNRESOLVED_ERROR).
 ```
 这是我的错误日志,是使用vagrant的过程中虚拟机打不开找到的.百思不得其解,google之~
-发现这里出现的问题主要是因为windows7的三个主题破解文件引起的,在网上有专门针对恢复的一种工具**UniversalThemePatcher**
+发现这里出现的问题主要是因为windows7的三个主题破解文件引起的,在网上有专门针对恢复的一种工具**UniversalThemePatcher**! 前车之鉴...
