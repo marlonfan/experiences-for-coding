@@ -32,7 +32,7 @@ return $baoming;
 ```
 我只想深深说句 fuck!.
 
-##2014.01.01
+##2015.01.01
 ####virtualbox R3问题
 
 ```bash
@@ -42,7 +42,7 @@ Unable to load R3 module D:\app\virtualbox/VBoxDD.DLL (VBoxDD): GetLastError=179
 发现这里出现的问题主要是因为windows7的三个主题破解文件引起的,在网上有专门针对恢复的一种工具**UniversalThemePatcher**! 前车之鉴...
 ``嗯.还有个小提示,用ssh提交git不要密码的,但是如果用的是http协议还是会要的.``
 
-##2014.01.07
+##2015.01.07
 ####laravel包开发问题
 
 折腾了一晚上这个问题,用``Config:get()``一直取不到配置到最后发现**laravel的包名和Config取数据的时候的包名一定要大小写一致**
