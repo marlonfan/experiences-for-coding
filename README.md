@@ -1,6 +1,6 @@
 ﻿#掌门新锐 工作学习总结
 
-> ##2014.12.30
+##2014.12.30
 ####在自己home目录里可以找到相对应的.bash*文件
 
 - .bashrc 这里可以添加一些自定义的sh命令,可以很方便的执行
@@ -10,7 +10,7 @@
 
 在使用时,应该**尽可能的把东西加在.bashrc里面而不是.bash_profile里面**,这样可以减少错误的发生.
 
-> ##2014.12.31
+##2014.12.31
 ####laravel中总模型可以直接toArray()
 
 在今天立哥review代码的时候提出来的.
@@ -32,7 +32,7 @@ return $baoming;
 ```
 我只想深深说句 fuck!.
 
-> ##2014.01.01
+##2014.01.01
 ####virtualbox R3问题
 
 ```bash
@@ -41,3 +41,8 @@ Unable to load R3 module D:\app\virtualbox/VBoxDD.DLL (VBoxDD): GetLastError=179
 这是我的错误日志,是使用vagrant的过程中虚拟机打不开找到的.百思不得其解,google之~
 发现这里出现的问题主要是因为windows7的三个主题破解文件引起的,在网上有专门针对恢复的一种工具**UniversalThemePatcher**! 前车之鉴...
 ``嗯.还有个小提示,用ssh提交git不要密码的,但是如果用的是http协议还是会要的.``
+
+##2014.01.07
+####laravel包开发问题
+
+折腾了一晚上这个问题,用``Config:get()``一直取不到配置到最后发现**laravel的包名和Config取数据的时候的包名一定要大小写一致**
