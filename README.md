@@ -46,3 +46,11 @@ Unable to load R3 module D:\app\virtualbox/VBoxDD.DLL (VBoxDD): GetLastError=179
 ####laravel包开发问题
 
 折腾了一晚上这个问题,用``Config:get()``一直取不到配置到最后发现**laravel的包名和Config取数据的时候的包名一定要大小写一致**
+
+##2015.01.12
+#####PS:原谅这几天太忙,好多东西还没总结.
+####在foreach中的in_array()问题
+昨天做一个时间匹配的时候需要大范围内的进行循环对比
+我的思路是循环用in_array()对比是否包含某个字,老大说循环次数太多了...
+原来要将要查找的值直接转换成键,然后去对比等不等于,这样是黑红二分叉查询。要比我的思路快很多~~
+
