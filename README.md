@@ -76,3 +76,56 @@ Unable to load R3 module D:\app\virtualbox/VBoxDD.DLL (VBoxDD): GetLastError=179
 自己在做完的时候要自己把流程先耐心的走一遍,尽可能的去发现问题
 细心细心细心.....
 在让用户使用某个东西时,永远将用户当傻子来对待,当涉及程序严谨性的时候,一定要把用户想象成有一定经验的hack.
+
+
+##2015.05.29
+####javascript异步理解
+废话不说,先扔代码
+```javascript
+interface TaskFunction {
+	(done: (result?: any) => void): void;
+}
+
+function all(taskFns: TaskFunction[], callback: (results: any[]) => void): void {
+	var results: string[] = [];	
+	
+	var pending = taskFns.length;
+	
+	taskFns.forEach((taskFn, index) => {
+		taskFn(result => {
+			if (index in results) {
+				return;
+			}
+			
+			results[index] = result;
+			
+			if (--pending == 0) {
+				callback(results);
+			}
+		});
+	});
+}
+
+all([
+	done => {
+		done('hello');
+	},
+	done => {
+		setTimeout(() => {
+			done(', ');
+		}, 100);
+	},
+	done => {
+		setInterval(() => {
+			done('world');
+		}, 1000);
+	},
+	done => {
+		done('!');
+	}
+], results => {
+	console.log(results.join('')); // 输出 hello, world!
+})
+```
+
+通过这个程序来练习对javascript异步的理解和计数器的概念
