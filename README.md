@@ -8,7 +8,7 @@
 
 ![up](http://7vzoky.com1.z0.glb.clouddn.com/2015/10/1722185507.png)
 
-一个delete,一年多得东西全部都删掉了,相关可以整理的也放在了[issue](https://github.com/MarlonFan/question-list/issues)里,因为觉得这样更好整理一些.
+一个delete,一年多得东西全部都删掉了,相关可以整理的也放在了[issue](https://github.com/MarlonFan/experiences-for-coding/issues)里,因为觉得这样更好整理一些.
 
 在上海一个人呆了这么久,感觉确实成长蛮快的,现在看清了自己的短板和一些缺点,也真正认清了自己的优势所在.未来的日子,希望不会太差.
 
