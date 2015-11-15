@@ -1,52 +1,50 @@
 #include <stdio.h>
 
-int a[101], n;
+int list[100], n;
 
 void quickSort(int left, int right) {
+    
     int i,j,t,temp;
+    
     if (left > right) {
         return;
     }
-
-    temp = a[left];
+    
     i = left;
     j = right;
+    temp = list[left];
 
-    while (i != j) {
-        while (a[j] >= temp && i < j)
-            j--;
-        while (a[i] <= temp && i < j)
-            i++;
-
+        
+    for (; i != j;) {
+        for (; list[j] >= temp && i < j; j--) {}
+        for (; list[i] <= temp && i < j; i++) {}
+        
         if (i < j) {
-            t = a[i];
-            a[i] = a[j];
-            a[j] = t;
+            t = list[i];
+            list[i] = list[j];
+            list[j] = t;
         }
     }
-
-    a[left] = a[i];
-    a[i] = temp;
-
+    
+    list[left] = list[i];
+    list[i] = temp;
+    
     quickSort(left, i-1);
     quickSort(i+1, right);
 }
 
-int main()
-{
-    int i, j, t;
-    printf("请输入要输入的数字个数\n");
+int main() {
+    printf("请输入要排序的个数\n");
     scanf("%d", &n);
-
-    for (i=1; i<=n; i++) {
-        scanf("%d", &a[i]);
+    
+    for (int i = 1; i <= n; i++) {
+        scanf("%d", &list[i]);
     }
-
+    
     quickSort(1, n);
-
-    for (i = 1; i <=n; i++) {
-        printf("%d ", a[i]);
+    
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", list[i]);
     }
-
     return 0;
 }
