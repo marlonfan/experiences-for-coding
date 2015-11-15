@@ -1,19 +1,14 @@
 #include <stdio.h>
 
-int list[100], n;
-
-void quickSort(int left, int right) {
-
+void quickSort(int list[],int left, int right) {
+    
     int i,j,t,temp;
-
-    if (left > right) {
-        return;
-    }
+    
+    if (left > right) return;
 
     i = left;
     j = right;
     temp = list[left];
-
 
     for (; i != j;) {
         for (; list[j] >= temp && i < j; j--) {}
@@ -29,11 +24,13 @@ void quickSort(int left, int right) {
     list[left] = list[i];
     list[i] = temp;
 
-    quickSort(left, i-1);
-    quickSort(i+1, right);
+    quickSort(list, left, i-1);
+    quickSort(list, i+1, right);
 }
 
 int main() {
+    int list[100], n;
+    
     printf("请输入要排序的个数\n");
     scanf("%d", &n);
 
@@ -41,7 +38,7 @@ int main() {
         scanf("%d", &list[i]);
     }
 
-    quickSort(1, n);
+    quickSort(list, 1, n);
 
     for (int i = 1; i <= n; i++) {
         printf("%d ", list[i]);
