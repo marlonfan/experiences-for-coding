@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <vector>
+
+using namespace std;
 
 typedef struct tagObject {
 	int weight;
@@ -42,4 +45,5 @@ int Choosefunc1(std::vector<OBJECT>& objs, int c) {
 
 int main() {
 	
+	return 0;
 }
