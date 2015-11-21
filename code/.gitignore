@@ -1,6 +1,6 @@
 *
 !.gitignore
-!*.c
-!*.cpp
-!*/*.c
-!*/*.cpp
+!SuanFaDeLeQu/*.c
+!SuanFaDeLeQu/*.cpp
+!DaHuaShuJuJieGou/*.c
+!DaHuaShuJuJieGou/*.cpp
